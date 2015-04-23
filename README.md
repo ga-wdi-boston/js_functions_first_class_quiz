@@ -1,6 +1,11 @@
-# Quiz: Javascript Fundamentals
+# Quiz: Topic Goes Here
 
-Directions: I will fill this in later. Remind students that they can execute the code.
+#### Directions
+
+* Fork and clone this quiz.
+* You have 20 minutes. When you're done, commit your work and make a pull request.
+* Feel free to use your notes and Google, but you should work by yourself (not with a partner).
+* Also feel free to run your code in the browser to check if it works!
 
 <!-- budget about 5 minutes per question -->
 <!-- quiz questions should match objectives -->
