@@ -1,7 +1,9 @@
 // Quiz: Topic Goes Here
 
-// budget about 5 minutes per question
 // quiz questions should match objectives
+// keep it simple
+// be very specific in your directions
+// 4 questions = about 20 minutes for students to complete
 // replace the example questions with your own
 
 
