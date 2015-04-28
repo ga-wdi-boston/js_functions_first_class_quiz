@@ -7,7 +7,7 @@
 * Write your answers in the `quiz.js` file.
 
 * You have 20 minutes. When you're done, commit your work and make a pull
-* request.
+request.
 
 * Feel free to use your notes and Google, but you should work by yourself (not
 with a partner).
