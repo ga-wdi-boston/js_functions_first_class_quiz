@@ -10,7 +10,9 @@ function writeDing() {
   console.log('Ding!');
 }
 
-var dingHandle = setTimeout (writeDing(), 3000);
+var dingHandle = setTimeout (writeDing(), 9000);
+
+
 
 // Question 2
 
@@ -34,7 +36,16 @@ var dingHandle = setTimeout (writeDing(), 3000);
 var words = ['short', 'medium', 'long', 'interminable', 'lengthy'];
 
 var byLength = function (A, B) {
-  // your code here
+  if (A > B) {
+    return -1;
+  }
+    else if (A === B) {
+      return equal;
+    } else if (A < B) {
+      return 1;
+    }
+    }
+  }
 };
 
 var sortedWords = words.sort(byLength);
