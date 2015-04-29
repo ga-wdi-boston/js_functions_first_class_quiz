@@ -6,11 +6,9 @@
 // wait three seconds, then write "Ding!" to the console.  Instead, it writes
 // "Ding!" immediately.  Find the bug and fix it.
 
-function writeDing() {
-  console.log('Ding!');
-}
 
-var dingHandle = setTimeout (writeDing(), 3000);
+var dingHandle = setTimeout (function() {console.log('Ding!');}, 3000);
+
 
 // Question 2
 
@@ -34,10 +32,21 @@ var dingHandle = setTimeout (writeDing(), 3000);
 var words = ['short', 'medium', 'long', 'interminable', 'lengthy'];
 
 var byLength = function (A, B) {
-  // your code here
+  if (A.length < B.length) {
+    return -1;
+  } if (A.length > B.length) {
+    return 1;
+  } if (A.length === B.length) {
+    return 0;
+  }
 };
 
 var sortedWords = words.sort(byLength);
+
+ for (var i = 0; i < words.length; i++) {
+    console.log(sortedWords[i]);
+ }
+
 
 // testing for correct answer
 
@@ -56,7 +65,13 @@ catch (e) {
 // the words from longest to shortest?  Write it as an anomymous function.
 
 var sortedWords = words.sort(function (A, B){
-  // your code here
+  if (A.length < B.length) {
+    return 1;
+  } if (A.length > B.length) {
+    return -1;
+  } if (A.length === B.length) {
+    return 0;
+  }
 });
 
 try {
@@ -87,7 +102,9 @@ function power(m, n) {
 // you specified in the makePower call.
 
 function makePower(power) {
-  // your code here
+  return function (x) {
+    return Math.pow(x, power);
+  };
 }
 
 var power2 = makePower(2);
