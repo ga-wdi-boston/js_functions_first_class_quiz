@@ -10,7 +10,7 @@ function writeDing() {
   console.log('Ding!');
 }
 
-var dingHandle = setTimeout (writeDing(), 3000);
+var dingHandle = setTimeout(writeDing, 3000);
 
 // Question 2
 
@@ -34,7 +34,13 @@ var dingHandle = setTimeout (writeDing(), 3000);
 var words = ['short', 'medium', 'long', 'interminable', 'lengthy'];
 
 var byLength = function (A, B) {
-  // your code here
+  if (A.length < B.length){
+    return -1;
+  } else if (A.length === B.length){
+    return 0;
+  } else {
+    return 1;
+  }
 };
 
 var sortedWords = words.sort(byLength);
@@ -57,6 +63,13 @@ catch (e) {
 
 var sortedWords = words.sort(function (A, B){
   // your code here
+  if (A.length < B.length){
+    return 1;
+  } else if (A.length === B.length){
+    return 0;
+  } else {
+    return -1;
+  }
 });
 
 try {
@@ -87,17 +100,28 @@ function power(m, n) {
 // you specified in the makePower call.
 
 function makePower(power) {
-  // your code here
+   return function(x){
+      var result = 1;
+      for (var i = 1; i <= power; i++) {
+        result *= x;
+     }
+     return result;
+  }
 }
 
 var power2 = makePower(2);
 var power3 = makePower(3);
 
+
 try {
   assert.strictEqual(power2(4), 16);
+  //console.log(power2(4));
   assert.strictEqual(power2(3), 9);
+  //console.log(power2(3));
   assert.strictEqual(power3(2), 8);
+  //console.log(power3(2));
   assert.strictEqual(power3(3), 27);
+  //console.log(power3(3));
   console.log("Answer to question 4 is correct");
 }
 catch (e) {
