@@ -10,7 +10,12 @@ function writeDing() {
   console.log('Ding!');
 }
 
-var dingHandle = setTimeout (writeDing(), 3000);
+
+var dingHandle = setTimeout (writeDing, 3000);
+
+
+console.log(dingHandle);
+
 
 // Question 2
 
@@ -34,10 +39,19 @@ var dingHandle = setTimeout (writeDing(), 3000);
 var words = ['short', 'medium', 'long', 'interminable', 'lengthy'];
 
 var byLength = function (A, B) {
-  // your code here
+  for (i = 0; i < words.length; i++) {
+    if (A.length < B.length ) {
+      return -1;
+    } else if (A.length > B.length) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
 };
 
 var sortedWords = words.sort(byLength);
+
 
 // testing for correct answer
 
@@ -56,8 +70,18 @@ catch (e) {
 // the words from longest to shortest?  Write it as an anomymous function.
 
 var sortedWords = words.sort(function (A, B){
-  // your code here
+  for (i = 0; i < words.length; i++) {
+    if (A.length < B.length ) {
+      return -1;
+    } else if (A.length > B.length) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
 });
+
+sortedWords = [];
 
 try {
   assert.deepEqual(sortedWords, ['interminable', 'lengthy', 'medium', 'short', 'long']);
