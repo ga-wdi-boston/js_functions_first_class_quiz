@@ -10,7 +10,9 @@ function writeDing() {
   console.log('Ding!');
 }
 
-var dingHandle = setTimeout (writeDing(), 3000);
+var dingHandle = function(){setTimeout(writeDing, 3000)};
+
+// dingHandle();
 
 // Question 2
 
@@ -34,12 +36,12 @@ var dingHandle = setTimeout (writeDing(), 3000);
 var words = ['short', 'medium', 'long', 'interminable', 'lengthy'];
 
 var byLength = function (A, B) {
-  // your code here
+  return A.length - B.length;
 };
 
 var sortedWords = words.sort(byLength);
 
-// testing for correct answer
+// TESTING console.log(words);
 
 var assert = require('assert');
 try {
@@ -56,8 +58,10 @@ catch (e) {
 // the words from longest to shortest?  Write it as an anomymous function.
 
 var sortedWords = words.sort(function (A, B){
-  // your code here
+  return B.length - A.length;
 });
+
+// TESTING console.log(words);
 
 try {
   assert.deepEqual(sortedWords, ['interminable', 'lengthy', 'medium', 'short', 'long']);
@@ -87,7 +91,13 @@ function power(m, n) {
 // you specified in the makePower call.
 
 function makePower(power) {
-  // your code here
+  return function(x){
+    var mult = 1
+  for (var i = 0; i < power; i++) {
+    mult *= x
+   }
+  return mult;
+  }
 }
 
 var power2 = makePower(2);
