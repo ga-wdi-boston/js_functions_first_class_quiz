@@ -67,7 +67,18 @@ catch (e) {
 // the words from longest to shortest?  Write it as an anomymous function.
 
 var sortedWords = words.sort(function (A, B){
-  // your code here
+  if(A.length == B.length)
+  {
+    return 0;
+  }
+  else if (A.length > B.length)
+  {
+    return -1;
+  }
+  else
+  {
+    return 1;
+  }
 });
 
 try {
