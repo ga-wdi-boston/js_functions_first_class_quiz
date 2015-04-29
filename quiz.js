@@ -109,7 +109,15 @@ function power(m, n) {
 // you specified in the makePower call.
 
 function makePower(power) {
-  // your code here
+  return function (base)
+  {
+    var result = 1;
+    for (var i = 0; i < power; i++) {
+      result *= base;
+    }
+
+    return result;
+  }
 }
 
 var power2 = makePower(2);
