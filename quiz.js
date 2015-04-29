@@ -68,17 +68,17 @@ catch (e) {
 var sortedWords = words.sort(function (A, B){
   A = A.length;
   B = B.length;
-    if (A > B){
+    if (A < B){
       return 1;
     }
-    else if (A === B){
-      return 0;
-    }
-    else {
+    else if (A > B){
       return -1;
     }
+    else {
+      return 0;
+    }
   }
-});
+);
 
 try {
   assert.deepEqual(sortedWords, ['interminable', 'lengthy', 'medium', 'short', 'long']);
