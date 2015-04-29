@@ -10,7 +10,7 @@ function writeDing() {
   console.log('Ding!');
 }
 
-var dingHandle = setTimeout (writeDing(), 3000);
+var dingHandle = setTimeout (writeDing, 3000);
 
 // Question 2
 
@@ -34,7 +34,13 @@ var dingHandle = setTimeout (writeDing(), 3000);
 var words = ['short', 'medium', 'long', 'interminable', 'lengthy'];
 
 var byLength = function (A, B) {
-  // your code here
+  if(A.length < B.length){
+    return -1;
+  } else if (B.length < A.length){
+    return 1;
+  } else {
+    return 0;
+  }
 };
 
 var sortedWords = words.sort(byLength);
@@ -56,7 +62,13 @@ catch (e) {
 // the words from longest to shortest?  Write it as an anomymous function.
 
 var sortedWords = words.sort(function (A, B){
-  // your code here
+    if(A.length > B.length){
+      return -1;
+    } else if (B.length > A.length){
+      return 1;
+    } else {
+      return 0;
+    }
 });
 
 try {
@@ -87,7 +99,13 @@ function power(m, n) {
 // you specified in the makePower call.
 
 function makePower(power) {
-  // your code here
+  return function (m){
+    var result = 1;
+    for (var i = 1; i < power; i++) {
+      result *= m;
+    }
+    return result;
+  }
 }
 
 var power2 = makePower(2);
