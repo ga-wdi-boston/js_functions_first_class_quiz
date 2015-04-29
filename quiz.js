@@ -6,11 +6,11 @@
 // wait three seconds, then write "Ding!" to the console.  Instead, it writes
 // "Ding!" immediately.  Find the bug and fix it.
 
-function writeDing() {
+function writeDing(3) {
   console.log('Ding!');
 }
 
-var dingHandle = setTimeout (writeDing(), 3000);
+var dingHandle = setTimeout (writeDing(3), 3000);
 
 // Question 2
 
@@ -34,7 +34,26 @@ var dingHandle = setTimeout (writeDing(), 3000);
 var words = ['short', 'medium', 'long', 'interminable', 'lengthy'];
 
 var byLength = function (A, B) {
-  // your code here
+
+
+
+function shortAndLong(short, long) {
+    var words = [];
+        for (var i = 0; i < startNode.answers.length; i++) {
+            var words = startNode.answers[i];
+            if (child.nextQuestion == null) {
+                para.push(currentCost);
+            }else {
+
+            }
+        }
+
+
+
+
+
+
+
 };
 
 var sortedWords = words.sort(byLength);
