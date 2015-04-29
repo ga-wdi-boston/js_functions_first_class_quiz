@@ -10,7 +10,9 @@ function writeDing() {
   console.log('Ding!');
 }
 
-var dingHandle = setTimeout (writeDing(), 3000);
+var dingHandle = setTimeout (writeDing, 3000);
+
+
 
 // Question 2
 
@@ -31,11 +33,21 @@ var dingHandle = setTimeout (writeDing(), 3000);
 // Remember that if x is a variable containing a string, you can find its
 // length with the expression x.length.
 
+
 var words = ['short', 'medium', 'long', 'interminable', 'lengthy'];
+words.sort(function)
 
 var byLength = function (A, B) {
-  // your code here
+  if ((AB === true) && (BA === false) {
+    return -1;
+  } else if ((BA === true) && (AB === false) {
+    return 1;
+  } else {
+    return 0;
+  }
 };
+
+
 
 var sortedWords = words.sort(byLength);
 
