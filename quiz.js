@@ -102,8 +102,8 @@ function power(m, n) {
 function makePower(power) {
    return function(x){
       var result = 1;
-      for (var i = 0; i < x; i++) {
-        result *= power;
+      for (var i = 1; i <= power; i++) {
+        result *= x;
      }
      return result;
   }
